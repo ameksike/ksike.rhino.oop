@@ -42,6 +42,12 @@ Ejemplo de utilización en un Web Browser:
 			return this.owner;
 		}
 	});
+	
+	//... Creando instancias de las clases 
+	var dog = new Dog("Pluto", "Mickey Mouse");
+	//... invocando funciones 
+	console.log(dog.getName());
+	console.log(dog.getOwner());
 ```
 
 Ejemplo de utilización en NodeJs:
@@ -75,6 +81,11 @@ Ejemplo de utilización en NodeJs:
 			return this.owner;
 		}
 	});
+	//... Creando instancias de las clases 
+	var dog = new Dog("Pluto", "Mickey Mouse");
+	//... invocando funciones 
+	console.log(dog.getName());
+	console.log(dog.getOwner());
 ```
 
 Para mayor comprensión véase los demos y la documentación publicada.
