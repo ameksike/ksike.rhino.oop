@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>KOOP Web Demo</title>
+
+		<!-- IN KOOP js necesarios para utilizar la biblioteca -->
+		<script type="text/javascript" src="../../koop/src/common/Class.js"> </script>
+		<!-- nótese como las keyword son cargadas con carácter opcional en función de minimizar la carga de nuestras aplicaciones, en este caso se utilizan solo dos. -->
+		<script type="text/javascript" src="../../koop/src/common/keyword/Extend.js"> </script>
+		<script type="text/javascript" src="../../koop/src/common/keyword/StylePb.js"> </script>
+		<!-- OUT KOOP js necesarios para utilizar la biblioteca KOOP -->
+		
+		<script type="text/javascript"> 
+			//... Definir una clase base denominada Animal
+			koop.class("Animal",
+			{
+				construct: function(name){
+					 this.name = name ? name : "";
+				},
+				shout: function(){
+					return "-";
+				},
+				getName: function(){
+					return this.name;
+				}
+			});
+			//... Definir una clase Dog que hereda de Animal
+			koop.class("Dog",
+			{
+				extend: Animal,
+				construct: function(name, owner){
+					//... Redefinir el constructor 
+					this.owner = owner ? owner : "";
+					//... Invocar el contructor de la clase padre
+					this.parent.construct.apply(this, [name]);
+				},
+				getOwner:function(){
+					return this.owner;
+				}
+			});
+			//... Definir una clase Cat que hereda de Animal, pero en esta ocasión especificarla como texto
+			koop.class("Cat",
+			{
+				extend: "Animal",
+				construct: function(name){
+					this.msi = false;
+					//... Invocar el contructor de la clase padre
+					this.parent.construct.apply(this, [name]);
+				},
+				shout:function(){
+					return this.parent.shout() + "miau";
+				}
+			});
+			//... Definir una clase Siames que hereda de Cat, estableciéndose una jerarquía de 3 nivel
+			koop.class("Siames",
+			{
+				extend: "Cat",
+				steal: function(){
+					return "... it's coming;";
+				}
+			});
+			//... Creando instancias de las clases 
+			var siames = new Siames("Michuky");
+			var cat = new Cat("Mishu");
+			var dog = new Dog("Pluto", "Mickey Mouse");
+			//... invocando funciones 
+			console.log(siames.getName());
+			console.log(cat.getName());
+			console.log(dog.getName());
+			console.log(dog.getOwner());
+			//..................................................
+		</script>
+		
+	</head>
+	 
+	<body>
+		<h3>Programando orientado a objeto en mis aplicaciones web.</h3>
+			
+	</body>
+</html>
+
