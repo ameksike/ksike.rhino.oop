@@ -1,5 +1,8 @@
-
 # koop
+
+Ksike Object Oriented Prograning (KOOP), is a library that allows you to create an abstraction layer that promotes and facilitates the use of the object-oriented programming paradigm on the JavaScript language
+
+# .............................................................
 Ksike Object Oriented Prograning (KOOP), es una biblioteca que permite crear una capa de abstracción que promueve y facilita el empleo del paradigma de programación orientado a objeto sobre el lenguaje JavaScript
 
 
@@ -89,3 +92,5 @@ Ejemplo de utilización en NodeJs:
 ```
 
 Para mayor comprensión véase los demos y la documentación publicada.
+
+For more understanding see the demos and the published documentation.
