@@ -1,24 +1,32 @@
 # koop
 
-Ksike Object Oriented Prograning (KOOP), is a library that allows you to create an abstraction layer that promotes and facilitates the use of the object-oriented programming paradigm on the JavaScript language
+Ksike Object Oriented Prograning (KOOP), is a library that allows you to create an abstraction layer that promotes and facilitates the use of the object-oriented programming paradigm on the JavaScript language.
 
-# .............................................................
-Ksike Object Oriented Prograning (KOOP), es una biblioteca que permite crear una capa de abstracción que promueve y facilita el empleo del paradigma de programación orientado a objeto sobre el lenguaje JavaScript
+KOOP is Written in native JavaScript defines a system of plugins that allow developers to extend the operation of the library, through the prototype of the general interface Class. In this way, all the keywords in the library are implemented.
 
+![Screenshot](README/keywords.png)
 
+# 
 
-Ejemplo de utilización en un Web Browser:
+Ksike Object Oriented Prograning (KOOP), es una biblioteca que permite crear una capa de abstracción que promueve y facilita el empleo del paradigma de programación orientado a objeto sobre el lenguaje JavaScript.
+
+Escrita en JavaScript nativo define un sistema de complementos que permiten a los desarrolladores extender el funcionamiento de la biblioteca, a través del prototipo de la interfaz general denominada Clase. De esta forma están implementadas todas las palabras reservadas de la biblioteca.
+
+# 
+
+Example of use in a web page:
 ```html
-	<!-- IN KOOP js necesarios para utilizar la biblioteca -->
+	<!-- IN KOOP js files needed to use the library -->
 	<script type="text/javascript" src="../../koop/src/common/Class.js"> </script>
-	<!-- nótese como las keyword son cargadas con carácter opcional en función de minimizar la carga de nuestras aplicaciones, en este caso se utilizan solo dos. -->
+	<!-- Note how the keywords are loaded optionally in order to minimize the load of our applications, in this case only two are used. -->
 	<script type="text/javascript" src="../../koop/src/common/keyword/Extend.js"> </script>
 	<script type="text/javascript" src="../../koop/src/common/keyword/StylePb.js"> </script>
-	<!-- OUT KOOP js necesarios para utilizar la biblioteca KOOP -->
+	<!-- OUT KOOP js files needed to use the library -->
 ```
 
+Example of use in a javascript file for a web page:
 ```javascript
-	//... Definir una clase base denominada Animal
+	//... Define a base class named Animal
 	koop.class("Animal",
 	{
 		construct: function(name){
@@ -36,9 +44,9 @@ Ejemplo de utilización en un Web Browser:
 	{
 		extend: Animal,
 		construct: function(name, owner){
-			//... Redefinir el constructor 
+			//... Redefine the constructor
 			this.owner = owner ? owner : "";
-			//... Invocar el contructor de la clase padre
+			//... Invoke the constructor of the parent class
 			this.parent.construct.apply(this, [name]);
 		},
 		getOwner:function(){
@@ -46,18 +54,19 @@ Ejemplo de utilización en un Web Browser:
 		}
 	});
 	
-	//... Creando instancias de las clases 
+	//... Creating instances of the classes
 	var dog = new Dog("Pluto", "Mickey Mouse");
-	//... invocando funciones 
+	//... Invoking functions
 	console.log(dog.getName());
 	console.log(dog.getOwner());
 ```
+#
 
-Ejemplo de utilización en NodeJs:
+Example of use in Node.js:
 ```javascript
-	//... Cargar la biblioteca denominada KOOP
+	//... Load the library named KOOP
 	require("../../koop");
-	//... Definir una clase base denominada Animal
+	//... Define a base class named Animal
 	koop.class("Animal",
 	{
 		construct: function(name){
@@ -70,27 +79,25 @@ Ejemplo de utilización en NodeJs:
 			return this.name;
 		}
 	});
-	//... Definir una clase Dog que hereda de Animal
+	//... Define a Dog class that inherits from Animal
 	koop.class("Dog",
 	{
 		extend: Animal,
 		construct: function(name, owner){
-			//... Redefinir el constructor 
+			//... Redefine the constructor
 			this.owner = owner ? owner : "";
-			//... Invocar el contructor de la clase padre
+			//... Invoke the constructor of the parent class
 			this.parent.construct.apply(this, [name]);
 		},
 		getOwner:function(){
 			return this.owner;
 		}
 	});
-	//... Creando instancias de las clases 
+	//... Creating instances of the classes
 	var dog = new Dog("Pluto", "Mickey Mouse");
-	//... invocando funciones 
+	//... Invoking functions
 	console.log(dog.getName());
 	console.log(dog.getOwner());
 ```
 
-Para mayor comprensión véase los demos y la documentación publicada.
-
-For more understanding see the demos and the published documentation.
+For better understanding see the demos and the published documentation.
