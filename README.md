@@ -2,7 +2,7 @@
 
 Ksike Object Oriented Prograning (KOOP), is a library that allows you to create an abstraction layer that promotes and facilitates the use of the object-oriented programming paradigm on the JavaScript language.
 
-KOOP is Written in native JavaScript defines a system of plugins that allow developers to extend the operation of the library, through the prototype of the general interface Class. In this way, all the keywords in the library are implemented.
+KOOP is written in native JavaScript defines a system of plugins that allow developers to extend the operation of the library, through the prototype of the general interface Class. In this way, all the keywords in the library are implemented (extend, imitate, patterns, styles). For example, through the plugin mechanism for the definition of keywords it is possible to modify the coding style, one of the supported implementations in this aspect is called StylePb which defines a section for behavior and property, similar to the Lingo programming language.
 
 ![Screenshot](README/keywords.png)
 
@@ -10,7 +10,7 @@ KOOP is Written in native JavaScript defines a system of plugins that allow deve
 
 Ksike Object Oriented Prograning (KOOP), es una biblioteca que permite crear una capa de abstracción que promueve y facilita el empleo del paradigma de programación orientado a objeto sobre el lenguaje JavaScript.
 
-Escrita en JavaScript nativo define un sistema de complementos que permiten a los desarrolladores extender el funcionamiento de la biblioteca, a través del prototipo de la interfaz general denominada Clase. De esta forma están implementadas todas las palabras reservadas de la biblioteca.
+Escrita en JavaScript nativo define un sistema de complementos que permiten a los desarrolladores extender el funcionamiento de la biblioteca, a través del prototipo de la interfaz general denominada Clase. De esta forma están implementadas todas las palabras reservadas de la biblioteca. Por ejemplo, a través del mecanismo de plugins para la definición de palabras reservabas es posible modificar el estilo de codificación, una de las implementaciones soportadas en ese aspecto es el denominado StylePb el cual define un apartado para behavior y property, similar al lenguaje de programación Lingo. 
 
 # 
 
