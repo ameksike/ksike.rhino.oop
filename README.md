@@ -1,6 +1,8 @@
-# koop
+# Koop
 
 Ksike Object Oriented Prograning (KOOP), is a library that allows you to create an abstraction layer that promotes and facilitates the use of the object-oriented programming paradigm on the JavaScript language.
+
+![Screenshot](README/koop-full.svg)
 
 KOOP is written in native JavaScript defines a system of plugins that allow developers to extend the operation of the library, through the prototype of the general interface Class. In this way, all the keywords in the library are implemented (extend, imitate, patterns, styles). For example, through the plugin mechanism for the definition of keywords it is possible to modify the coding style, one of the supported implementations in this aspect is called StylePb which defines a section for behavior and property, similar to the Lingo programming language.
 
